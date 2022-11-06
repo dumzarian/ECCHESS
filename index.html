@@ -9,9 +9,29 @@
 <body>
     <h1>WELCOME TO DUMZALAND</h1>
     <p id="timer"></p>
+
+    <div>
+        <p>Wanna see a joke?</p>
+        <button onclick="jokeFn('black');">YES</button>
+        <button onclick="messFn();">NO</button>
+        <br>
+        <p id="testSpace"></p>
+    </div>
 </body>
 <script>
     document.getElementById("timer").innerHTML = "TIME IS HERE";
+
+    // we need to add a sleep time her set to 5 sec
+    // The screen need to go completely black
+    // and then print in title font "DID YOU GET THE JOKE?"
+    // and then go to the messFn
+    function jokeFn(color) {
+        document.body.style.backgroundColor = color;
+    }
+
+    function messFn() {
+        document.getElementById("testSpace").innerHTML = "THAT IS BECAUSE YOUR LIFE IS JOKE MY FRIEND";
+    }
 </script>
 
 </html>
